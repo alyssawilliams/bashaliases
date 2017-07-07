@@ -9,9 +9,17 @@ alias cl='clear'
 alias aliases='cat ~/.bash_aliases'
 
 
-# > SITE
+# > GIT
 
-alias portfolio='cl; cd /Applications/MAMP/htdocs/Portfolio; pwd; ls -a'
+# Gets git status
+alias stat='cl; git status'
+
+
+# > SITES
+
+alias sites='cl; cd "/Users/alyssawilliams/Documents/Git Projects"; pwd; echo "---"; ls; echo ""'
+
+alias portfolio='cl; cd /Applications/MAMP/htdocs/Portfolio; pwd; echo "---"; ls -a; echo ""'
 
 
 # > LAPTOP
@@ -19,6 +27,5 @@ alias portfolio='cl; cd /Applications/MAMP/htdocs/Portfolio; pwd; ls -a'
 #Brightens or dims screen (Ubuntu install)
 alias bright='sudo su -c '\''echo 972 >/sys/class/backlight/intel_backlight/brightness'\'''
 alias dim='sudo su -c '\''echo 162 >/sys/class/backlight/intel_backlight/brightness'\'''
-
 
 #***********************************************
