@@ -10,3 +10,5 @@ How to permanently save your aliases (Mac)
 	```
 
 2. Create the `~/.bash_aliases` file if it doesn't already exist
+
+3. If the changes don't apply, run `source ~/.bash_profile`
