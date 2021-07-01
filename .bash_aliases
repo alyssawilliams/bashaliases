@@ -39,8 +39,26 @@ alias gc='cl; git checkout $1'
 # Switch to master
 alias gcm='cl; git checkout master'
 
+# Commit changes
+alias gco='cl; git commit'
+
+# Amend previous commit
+alias gca='cl; git commit --amend'
+
+# Log changes
+alias gl='cl; git log -n 5 --oneline'
+
+# See contents of last commit
+alias glc='cl; git diff HEAD^..HEAD | subl'
+
+# Rebase onto previous commits
+alias grb='cl; git rebase -i | subl'
+
+# Pull remote commits
+alias gpl='cl; git pull'
+
 # Push a branch
-alias gp='cl; git push'
+alias gps='cl; git push'
 
 # Push a branch up
 alias gpu='cl; git push origin -u $1'
@@ -48,14 +66,8 @@ alias gpu='cl; git push origin -u $1'
 # Delete a branch
 alias gbd='cl; git branch -d $1'
 
-# Log changes
-alias gl='cl; git log -n 5 --oneline'
-
 
 
 # > SITES
-
-# Open The Sill Theme repo folder
-alias sill='cl; cd ~/Documents/the-sill-theme; git checkout master; git pull'
 
 #***********************************************
