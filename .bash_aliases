@@ -9,7 +9,7 @@ alias aliases='cl; cat ~/.bash_aliases'
 alias cl='clear'
 
 # Edit aliases
-alias edita='subl ~/.bash_aliases'
+alias edita='code ~/.bash_aliases'
 
 # Refresh the terminal
 alias refresh='source ~/.bash_profile; cl'
@@ -21,8 +21,8 @@ alias refresh='source ~/.bash_profile; cl'
 # Get git status
 alias st='cl; git status'
 
-# Open git diff in Sublime
-alias gd='cl; git diff | subl'
+# Open git diff in Code Editor
+alias gd='cl; git difftool'
 
 # Stage all changes
 alias ga='cl; git add .'
@@ -36,8 +36,8 @@ alias gcb='cl; git checkout -b $1'
 # Switch to a branch
 alias gc='cl; git checkout $1'
 
-# Switch to master
-alias gcm='cl; git checkout master'
+# Switch to main
+alias gcm='cl; git checkout main'
 
 # Commit changes
 alias gco='cl; git commit'
@@ -45,22 +45,25 @@ alias gco='cl; git commit'
 # Amend previous commit
 alias gca='cl; git commit --amend'
 
+# Rollback previous local commit
+alias grs='cl; git reset --soft HEAD~1'
+
 # Log changes
-alias gl='cl; git log -n 5 --oneline'
+alias gl='cl; git log -n 10 --oneline'
 
 # See contents of last commit
-alias glc='cl; git diff HEAD^..HEAD | subl'
+alias glc='cl; git diff HEAD^..HEAD | code -'
 
 # Rebase onto previous commits
-alias grb='cl; git rebase -i | subl'
+alias grb='cl; git rebase -i | code -'
 
 # Pull remote commits
 alias gpl='cl; git pull'
 
-# Push a branch
+# Push local changes to remote branch
 alias gps='cl; git push'
 
-# Push a branch up
+# Create a remote copy of a local branch
 alias gpu='cl; git push origin -u $1'
 
 # Delete a branch
